@@ -1,0 +1,9 @@
+# Add files here to ignore them from prettier formatting
+
+/dist
+/build
+/.react-router
+/coverage
+tmp
+pnpm-lock.yaml
+
