@@ -1,10 +1,11 @@
 import 'react-router'
 import { createRequestHandler } from '@react-router/express'
 import express from 'express'
+import { prisma } from '~/utils/prisma.server'
 
 declare module 'react-router' {
   interface AppLoadContext {
-    VALUE_FROM_EXPRESS: string
+    prisma: typeof prisma
   }
 }
 
@@ -16,7 +17,7 @@ app.use(
     build: () => import('virtual:react-router/server-build'),
     getLoadContext() {
       return {
-        VALUE_FROM_EXPRESS: 'Hello from Express',
+        prisma,
       }
     },
   }),
