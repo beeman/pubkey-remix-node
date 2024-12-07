@@ -22,5 +22,6 @@ FROM base AS final
 COPY ./package.json pnpm-lock.yaml server.js /app/
 COPY --from=final-base /app/node_modules /app/node_modules
 COPY --from=builder /app/build /app/build
+EXPOSE 3000
 WORKDIR /app
 CMD ["pnpm", "start"]
