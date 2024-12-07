@@ -56,6 +56,12 @@ importers:
       react-router:
         specifier: ^7.0.2
         version: 7.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      remix-auth:
+        specifier: ^4.0.0
+        version: 4.0.0
+      remix-auth-form:
+        specifier: ^3.0.0
+        version: 3.0.0(remix-auth@4.0.0)
     devDependencies:
       '@react-router/dev':
         specifier: ^7.0.2
@@ -1500,6 +1506,16 @@ packages:
 
   regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
+
+  remix-auth-form@3.0.0:
+    resolution: {integrity: sha512-2c8d9BUJhnOrXg2w/iELLMj7RYT9EDI5eip9DSfN8caCTw0V33tNXvUNW44cYJQ8CjwAPi94vVaaezCHEdTSbQ==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      remix-auth: ^4.0.0
+
+  remix-auth@4.0.0:
+    resolution: {integrity: sha512-9rLzT5PORCQFd8pdgHn6n2McH4OlDROlkmZ27r2aaNc99SLMNS7Q/VMgtW6HoLsEaxU050k1f2g6tG7ysFpZtA==}
+    engines: {node: '>=20.0.0'}
 
   retry@0.12.0:
     resolution: {integrity: sha512-9LkiTwjUh6rT555DtE9rTX+BKByPfrMzEAtnlEtdEwr3Nkffwiihqe2bWADg+OQRjt9gl6ICdmB/ZFDCGAtSow==}
@@ -3252,6 +3268,12 @@ snapshots:
   readdirp@4.0.2: {}
 
   regenerator-runtime@0.14.1: {}
+
+  remix-auth-form@3.0.0(remix-auth@4.0.0):
+    dependencies:
+      remix-auth: 4.0.0
+
+  remix-auth@4.0.0: {}
 
   retry@0.12.0: {}
 
